@@ -1,7 +1,7 @@
 public class Expense {
 
-    private String title; // Instance Variables
-    private double amount; // or Attributes
+    private String title;
+    private double amount;
     private String category;
 
     public Expense(String title, double amount, String category) {
