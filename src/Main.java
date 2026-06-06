@@ -13,7 +13,10 @@ public class Main {
             System.out.println("\n===== SMART EXPENSE TRACKER =====");
             System.out.println("1. Add Expense");
             System.out.println("2. View Expenses");
-            System.out.println("3. Exit");
+            System.out.println("3. Search Expense");
+            System.out.println("4. Delete Expense");
+            System.out.println("5. Total Spending");
+            System.out.println("6. Exit");
 
             System.out.print("Enter your choice: ");
             int choice = sc.nextInt();
@@ -48,6 +51,30 @@ public class Main {
                     break;
 
                 case 3:
+
+                    System.out.print("Enter keyword to search: ");
+                    String keyword = sc.nextLine();
+
+                    manager.searchExpense(keyword);
+
+                    break;
+
+                case 4:
+
+                    System.out.print("Enter title to delete: ");
+                    String deleteTitle = sc.nextLine();
+
+                    manager.deleteExpense(deleteTitle);
+
+                    break;
+
+                case 5:
+
+                    manager.totalSpending();
+
+                    break;
+
+                case 6:
 
                     System.out.println("Thank You For Using Smart Expense Tracker.");
                     sc.close();
